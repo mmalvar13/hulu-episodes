@@ -45,34 +45,31 @@
 			</p>
 		<h2>Conceptual Model</h2>
 			<ol>
-				<li><strong>Entity:</strong>User Account<br></li>
+				<li><strong>Entity:</strong>Account<br></li>
 					<ul>
 						<li>accountId</li>
 						<li>accountEmail</li>
-						<li>accountPassword</li>
-						<li>username</li>
+						<li>accountHash</li>
+						<li>accountSalt</li>
+						<li>accountUsername</li>
 					</ul>
 				<li><strong>Entity:</strong>Series<br></li>
 					<ul>
-						<li>seriesAccountId (foreign key)(bc it keeps track of what shows you have watched)</li>
 						<li>seriesId</li>
 						<li>seriesName</li>
 					</ul>
 				<li><strong>Entity:</strong>Episode<br></li>
 					<ul>
-						<li>episodeAccountId(foreign key)</li>
-						<li>episodeSeriesId (foreign key)</li>
 						<li>episodeId</li>
+						<li>episodeAccountId</li>
+						<li>episodeSeriesId</li>
 						<li>episodeName</li>
 					</ul>
 			</ol>
 		<h3>Relationships</h3>
 			<ul>
-				<li>One user can have one account</li>
-				<li>One <strong>account</strong> can view many <strong>series</strong></li>
-				<li>Many <strong>series</strong> can be viewed by many <strong>accounts</strong></li>
+				<li>Many <strong>accounts</strong> can view many <strong>episodes</strong></li>
 				<li>One <strong>series</strong> can have many <strong>episodes</strong></li>
-				<li>An <strong>episode</strong> can only belong to one <strong>series</strong></li>
 				<li>One <strong>user</strong> can view many <strong>series</strong> with many <strong>episodes</strong></li>
 			</ul>
 	</body>
