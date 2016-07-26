@@ -1,8 +1,8 @@
 CREATE TABLE account(
 	accountId INT UNSIGNED AUTO_INCREMENT NOT NULL,
 	accountEmail VARCHAR(128) NOT NULL,
-	accountHash CHAR(128) NOT NULL,
-	accountSalt CHAR(64) NOT NULL,
+	accountHash CHAR(128),
+	accountSalt CHAR(64),
 	accountUsername VARCHAR(32) NOT NULL,
 	UNIQUE(accountEmail),
 	UNIQUE(accountUsername),
